@@ -15,7 +15,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "vercel-build": "echo \"Static files and serverless API ready\"",
+    "vercel-build": "node --check server.js && node --check api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

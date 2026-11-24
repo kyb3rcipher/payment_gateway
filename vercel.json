@@ -1,10 +1,8 @@
 {
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "{index.html,payment.html,css/**,js/**,img/**}"
-    }
-  },
+  "framework": null,
+  "buildCommand": "npm run vercel-build",
   "rewrites": [
+    { "source": "/health", "destination": "/api/index" },
     { "source": "/create_preference", "destination": "/api/index" },
     { "source": "/payment-status/:paymentId", "destination": "/api/index" },
     { "source": "/mercadopago/webhook", "destination": "/api/index" }

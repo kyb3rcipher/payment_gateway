@@ -21,6 +21,11 @@ const catalog = {
 };
 
 function getBaseUrl(req) {
+  if (process.env.VERCEL === '1') {
+    const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+    if (productionUrl) return `https://${productionUrl}`;
+  }
+
   if (process.env.APP_BASE_URL) {
     return process.env.APP_BASE_URL.replace(/\/$/, '');
   }
@@ -29,6 +34,13 @@ function getBaseUrl(req) {
   return `${protocol}://${req.get('host')}`;
 }
 
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    environment: process.env.VERCEL ? 'vercel-production' : 'local',
+    mercadoPagoConfigured: Boolean(client)
+  });
+});
 
 app.post('/create_preference', async (req, res) => {
   try {
@@ -69,7 +81,7 @@ app.post('/create_preference', async (req, res) => {
           pending: `${baseUrl}/payment.html`
         },
         auto_return: 'approved',
-        ...(process.env.APP_BASE_URL
+        ...(baseUrl
           ? { notification_url: `${baseUrl}/mercadopago/webhook` }
           : {})
       }
