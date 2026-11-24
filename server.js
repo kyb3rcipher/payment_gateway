@@ -19,7 +19,7 @@ const client = accessToken ? new MercadoPagoConfig({ accessToken }) : null;
 const catalog = {
   'Gorditas UTD': { price: 150, description: 'Orden de 5 gorditas' },
   'Tacos UTD': { price: 350, description: 'Una orden de tacos' },
-  'Uber Eats': { price: 700, description: 'Crédito para tu pedido' }
+  'Uber Eats': { price: 5, description: 'Crédito para tu pedido' }
 };
 
 function getBaseUrl(req) {
