@@ -1,6 +1,7 @@
 {
   "framework": null,
   "buildCommand": "npm run vercel-build",
+  "outputDirectory": "public",
   "rewrites": [
     { "source": "/health", "destination": "/api/index" },
     { "source": "/create_preference", "destination": "/api/index" },

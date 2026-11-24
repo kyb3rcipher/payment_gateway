@@ -4,12 +4,14 @@ const express = require('express');
 const cors = require('cors');
 const { MercadoPagoConfig, Preference, Payment } = require('mercadopago');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname)));
+const publicDirectory = path.join(__dirname, 'public');
+app.use(express.static(fs.existsSync(publicDirectory) ? publicDirectory : __dirname));
 
 const accessToken = process.env.MP_ACCESS_TOKEN;
 const client = accessToken ? new MercadoPagoConfig({ accessToken }) : null;
