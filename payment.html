@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/payment.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+</head>
+<body>
+    <div class="resumen-y-pago">
+        <div class="estado-de-iphone">
+            <div class="div">9:41</div>
+            <div class="dynamic-island"></div>
+            <div class="div2">▴ ▰</div>
+        </div>
+        <div class="encabezado">
+            <button class="volver-a-mi" type="button" id="back-to-order">‹ Volver a mi orden</button>
+            <b class="todo-listo-para">Todo listo para pagar</b>
+        </div>
+        <div class="pedido">
+            <div class="payment-banner" id="payment-banner" role="alert" hidden>
+                <strong id="payment-banner-title"></strong>
+                <span id="payment-banner-message"></span>
+            </div>
+            <b class="resumen-de-tu">RESUMEN DE TU ORDEN</b>
+            <div class="productos-del-pedido" id="order-products"></div>
+            <div class="importe-a-pagar">
+                <div class="subtotal">
+                    <div class="b" id="subtotal-label">Subtotal · 0 productos</div>
+                    <div class="div6" id="subtotal">$0</div>
+                </div>
+                <div class="separador">
+                </div>
+                <div class="total">
+                    <div class="div">Total</div>
+                    <div class="total-en-pesos">
+                        <b class="b" id="payment-total">$0</b>
+                        <div class="mxn">MXN</div>
+                    </div>
+                </div>
+            </div>
+            <div class="confirma-que-tu">Confirma que tu orden esté correcta antes de continuar.</div>
+        </div>
+        <div class="accin-principal">
+            <div class="paga-de-forma">Paga de forma segura con Mercado Pago</div>
+            <button class="pagar-1200-mxn" type="button" id="pay-button">
+                <span class="pagar-1200-mxn2" id="pay-button-label">Pagar $0 MXN →</span>
+            </button>
+            <div class="sers-dirigido-al">Serás dirigido al pago para finalizar</div>
+            <div class="indicador-de-inicio">
+            </div>
+        </div>
+    </div>
+    <script src="js/payment.js"></script>
+</body>
+</html>

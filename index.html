@@ -1,95 +1,95 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integración de 3 Botones - Mercado Pago</title>
-
-  <!-- SDK oficial de Mercado Pago v2 -->
-  <script src="https://sdk.mercadopago.com/js/v2"></script>
-
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-    .pricing-container { display: flex; gap: 20px; }
-    .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 220px; text-align: center; }
-    .card h3 { color: #333; margin-bottom: 10px; }
-    .price { font-size: 24px; color: #009ee3; font-weight: bold; margin-bottom: 20px; }
-    .btn-pagar { background-color: #009ee3; color: white; border: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.2s; }
-    .btn-pagar:hover { background-color: #0073a8; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
 </head>
 <body>
+    <div class="elige-tu-orden">
+        <div class="estado-de-iphone">
+            <div class="div">9:41</div>
+            <div class="dynamic-island"></div>
+            <div class="div2">▴ ▰</div>
+        </div>
+        <div class="encabezado">
+            <b class="utd-food">UTD FOOD</b>
+            <b class="elige-tu-orden2">Elige tu orden</b>
+        </div>
+        <div class="pedido">
+            <div class="tu-antojo-a">Tu antojo, a un toque de distancia.</div>
+            <div class="gorditas-utd" data-product data-price="150" data-name="Gorditas UTD">
+                <div class="icono-de-gorditas">
+                    <img class="icono-de-gorditas-vector" alt="" src="img/gordita.svg">
 
-  <div class="pricing-container">
-    <!-- Botón 1 -->
-    <div class="card">
-      <h3>GORDITAS UTD</h3>
-      <div class="price">$150 MXN</div>
-      <button class="btn-pagar" onclick="iniciarPago('Pagar por 5 gorditas cafeteria UTD:', 150)">Comprar Ahora</button>
+                </div>
+                <div class="detalles">
+                    <div class="gorditas-utd2">Gorditas UTD</div>
+                    <div class="una-orden-de">Orden de 5 gorditas</div>
+                    <div class="precio">
+                        <b class="b" data-unit-price>$150</b>
+                        <div class="mxn">MXN</div>
+                    </div>
+                </div>
+                <div class="cantidad">
+                    <button class="productos quantity-button" type="button" data-action="decrease" aria-label="Reducir Gorditas UTD">−</button>
+                    <div class="div4" data-quantity>0</div>
+                    <button class="productos quantity-button" type="button" data-action="increase" aria-label="Agregar Gorditas UTD">+</button>
+                </div>
+            </div>
+            <div class="gorditas-utd" data-product data-price="350" data-name="Tacos UTD">
+                <div class="icono-de-tacos">
+                    <img class="icono-de-gorditas-vector" alt="" src="img/taco.svg">
+
+                </div>
+                <div class="detalles">
+                    <div class="gorditas-utd2">Tacos UTD</div>
+                    <div class="una-orden-de">Una orden de tacos</div>
+                    <div class="precio">
+                        <b class="b" data-unit-price>$350</b>
+                        <div class="mxn">MXN</div>
+                    </div>
+                </div>
+                <div class="cantidad">
+                    <button class="productos quantity-button" type="button" data-action="decrease" aria-label="Reducir Tacos UTD">−</button>
+                    <div class="div4" data-quantity>0</div>
+                    <button class="productos quantity-button" type="button" data-action="increase" aria-label="Agregar Tacos UTD">+</button>
+                </div>
+            </div>
+            <div class="gorditas-utd" data-product data-price="700" data-name="Uber Eats">
+                <div class="icono-de-bolsa-de-compra">
+                    <img class="icono-de-gorditas-vector" alt="" src="img/uber.svg">
+
+                </div>
+                <div class="detalles">
+                    <div class="gorditas-utd2">Uber Eats</div>
+                    <div class="una-orden-de">Crédito para tu pedido</div>
+                    <div class="precio">
+                        <b class="b" data-unit-price>$700</b>
+                        <div class="mxn">MXN</div>
+                    </div>
+                </div>
+                <div class="cantidad">
+                    <button class="productos quantity-button" type="button" data-action="decrease" aria-label="Reducir Uber Eats">−</button>
+                    <div class="div4" data-quantity>0</div>
+                    <button class="productos quantity-button" type="button" data-action="increase" aria-label="Agregar Uber Eats">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="accin-principal">
+            <div class="total-del-pedido">
+                <div class="productos" data-product-count>0 productos</div>
+                <b class="mxn4" data-order-total>$0 MXN</b>
+            </div>
+            <button class="ver-mi-orden" type="button" data-review-order>
+                <span class="ver-mi-orden2">Ver mi orden →</span>
+            </button>
+            <div class="revisa-tu-pedido" data-review-message>Revisa tu pedido antes de pagar</div>
+            <div class="indicador-de-inicio">
+            </div>
+        </div>
     </div>
-
-    <!-- Botón 2 -->
-    <div class="card">
-      <h3>TACOS UTD</h3>
-      <div class="price">$350 MXN</div>
-      <button class="btn-pagar" onclick="iniciarPago('Pagar por una orden de tacos fuera de la UTD:', 350)">Comprar Ahora</button>
-    </div>
-
-    <!-- Botón 3 -->
-    <div class="card">
-      <h3>UBER EATS</h3>
-      <div class="price">$700</div>
-      <button class="btn-pagar" onclick="iniciarPago('Pagar por uber EATS', 700)">Comprar Ahora</button>
-    </div>
-  </div>
-
-  <script>
-    // Inicializa el SDK de Mercado Pago con tu Public Key
-    const mp = new MercadoPago('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', {
-      locale: 'es-MX' // Cambia el código de acuerdo a tu país (es-AR, es-CO, etc.)
-    });
-
-    async function iniciarPago(titulo, precio) {
-      try {
-        // 1. Solicita la preferencia al servidor backend
-        const response = await fetch('http://localhost:3000/create_preference', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            title: titulo,
-            price: precio
-          })
-        });
-
-        const data = await response.json();
-
-        if (data.id) {
-          // 2. Abre el Checkout Pro de Mercado Pago de manera interactiva
-          mp.checkout({
-            preference: {
-              id: data.id
-            },
-            autoOpen: true // Abre el flujo de pago automáticamente al hacer clic
-          });
-        } else {
-          alert('Error al generar el pago. Intenta nuevamente.');
-        }
-
-      } catch (error) {
-        console.error('Error de red o conexión con el servidor:', error);
-      }
-    }
-  </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-

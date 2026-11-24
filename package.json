@@ -14,10 +14,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "vercel-build": "echo \"Static files and serverless API ready\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cors": "^2.8.6",
+    "dotenv": "^16.4.7",
     "express": "^5.3.0",
     "mercadopago": "^3.6.2"
   }

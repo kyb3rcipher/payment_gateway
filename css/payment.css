@@ -1,0 +1,325 @@
+.resumen-y-pago {
+    width: 100%;
+    height: 53.25rem;
+    position: relative;
+    border-radius: 44px;
+    background-color: #f7f9f7;
+    border: 1px solid #dee4df;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #66756b;
+    font-family: Inter;
+}
+
+.estado-de-iphone {
+    align-self: stretch;
+    height: 3.375rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1.687rem;
+    box-sizing: border-box;
+    gap: 1.25rem;
+    font-size: 0.813rem;
+    color: #19251f;
+}
+
+.div {
+    position: relative;
+    font-weight: 600;
+}
+
+.dynamic-island {
+    height: 1.75rem;
+    width: 6.5rem;
+    border-radius: 20px;
+    background-color: #101511;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.div2 {
+    position: relative;
+    font-size: 0.938rem;
+    font-weight: 600;
+    white-space: pre-wrap;
+}
+
+.encabezado {
+    align-self: stretch;
+    height: 6.75rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem 0rem;
+    box-sizing: border-box;
+    gap: 0.625rem;
+    color: #218c52;
+}
+
+.volver-a-mi {
+    position: relative;
+    font-weight: 500;
+    white-space: pre-wrap;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+.payment-banner {
+	align-self: stretch;
+	border-radius: 12px;
+	padding: 0.75rem 0.875rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	line-height: 1.25;
+}
+.payment-banner[data-status="approved"] {
+	background-color: #e8f5ec;
+	border: 1px solid #b7dcbc;
+	color: #17683b;
+}
+.payment-banner[data-status="pending"] {
+	background-color: #fff4da;
+	border: 1px solid #ecd58e;
+	color: #7a5a00;
+}
+.payment-banner[data-status="rejected"],
+.payment-banner[data-status="cancelled"],
+.payment-banner[data-status="failure"] {
+	background-color: #fdeaea;
+	border: 1px solid #efbcbc;
+	color: #9b2929;
+}
+
+.todo-listo-para {
+    position: relative;
+    font-size: 1.625rem;
+    color: #19251f;
+}
+
+.pedido {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.625rem 1.25rem 0rem;
+    gap: 1.125rem;
+}
+
+.resumen-de-tu {
+    position: relative;
+    font-size: 0.625rem;
+    letter-spacing: 1.2px;
+}
+
+.productos-del-pedido {
+    align-self: stretch;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #e4eae5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.125rem;
+    gap: 1.25rem;
+    font-size: 0.938rem;
+    color: #19251f;
+}
+
+.gorditas-utd {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.detalle-de-gorditas-utd {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+}
+
+.div3 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.una-orden-de {
+    position: relative;
+    font-size: 0.688rem;
+    color: #66756b;
+}
+
+.importe-a-pagar {
+    align-self: stretch;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #e4eae5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.125rem;
+    gap: 1.125rem;
+}
+
+.subtotal {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    flex-shrink: 0;
+}
+
+.div6 {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #19251f;
+}
+
+.separador {
+    width: 19.813rem;
+    height: 0.063rem;
+    background-color: #e4eae5;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.total {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    flex-shrink: 0;
+    font-size: 1.063rem;
+    color: #19251f;
+}
+
+.total-en-pesos {
+    overflow: hidden;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    font-size: 1.563rem;
+}
+
+.b {
+    position: relative;
+}
+
+.mxn {
+    position: relative;
+    font-size: 0.625rem;
+    font-weight: 500;
+    color: #66756b;
+}
+
+.confirma-que-tu {
+    align-self: stretch;
+    position: relative;
+    line-height: 1.188rem;
+}
+
+.accin-principal {
+    align-self: stretch;
+    height: 11.875rem;
+    background-color: #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.125rem 1.5rem 0rem;
+    box-sizing: border-box;
+    position: relative;
+    isolation: isolate;
+    gap: 0.875rem;
+}
+
+.paga-de-forma {
+    position: relative;
+    font-weight: 500;
+    z-index: 0;
+    flex-shrink: 0;
+}
+
+.pagar-1200-mxn {
+    width: 21.563rem;
+    height: 3.5rem;
+    border-radius: 16px;
+    border: 0;
+    background-color: #218c52;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-size: 1rem;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+}
+.pagar-1200-mxn:disabled {
+    cursor: wait;
+    opacity: 0.72;
+}
+
+.pagar-1200-mxn2 {
+    position: relative;
+    font-weight: 600;
+    white-space: pre-wrap;
+}
+
+.sers-dirigido-al {
+    position: relative;
+    font-size: 0.688rem;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.indicador-de-inicio {
+    width: 7.875rem;
+    height: 0.313rem;
+    margin: 0 !important;
+    position: absolute;
+    top: 10.938rem;
+    left: 8.344rem;
+    border-radius: 4px;
+    background-color: #19251f;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    z-index: 3;
+}

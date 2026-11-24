@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{index.html,payment.html,css/**,js/**,img/**}"
+    }
+  },
+  "rewrites": [
+    { "source": "/create_preference", "destination": "/api/index" },
+    { "source": "/payment-status/:paymentId", "destination": "/api/index" },
+    { "source": "/mercadopago/webhook", "destination": "/api/index" }
+  ]
+}
